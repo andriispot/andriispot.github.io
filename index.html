@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andrii — Network Security Engineer</title>
+<title>Andrii Danylov — Network Security Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -416,6 +416,95 @@
     line-height: 1.7;
   }
 
+  /* PROJECTS */
+  #projects { background: var(--ink); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  .project-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: border-color 0.25s;
+  }
+
+  .project-card:hover {
+    border-color: var(--border-accent);
+  }
+
+  .project-header {
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-family: var(--display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-1);
+    margin-bottom: 0.35rem;
+    line-height: 1.35;
+  }
+
+  .project-scope {
+    font-size: 11.5px;
+    color: var(--accent-bright);
+    letter-spacing: 0.04em;
+  }
+
+  .project-desc {
+    font-size: 0.92rem;
+    color: var(--text-2);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+
+  .project-results {
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+  }
+
+  .project-results-label {
+    font-size: 10.5px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-result-item {
+    font-size: 0.875rem;
+    color: var(--text-2);
+    padding: 4px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .project-result-item::before {
+    content: '↗';
+    color: var(--accent-bright);
+    font-size: 11px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .project-tech {
+    margin-top: 1rem;
+    font-size: 12px;
+    color: var(--text-3);
+  }
+
+  .project-tech strong {
+    color: var(--text-2);
+  }
+
   /* CAREER */
   #career { background: var(--surface); }
 
@@ -721,26 +810,26 @@
   <canvas id="net" class="hero-canvas"></canvas>
   <div class="hero-inner">
     <div>
-      <p class="hero-eyebrow">Network Security Engineer · Boca Raton, FL</p>
-      <h1 class="hero-name">I build networks<br>that <em>don't fail.</em></h1>
-      <p class="hero-subtitle">14+ years of enterprise networking and cloud security — from co-founding a wireless ISP outside Kyiv to architecting Zero Trust infrastructure for mid-market enterprises in the US.</p>
+      <p class="hero-eyebrow">Network Infrastructure, Security &amp; Automation Engineer · Boca Raton, FL</p>
+      <h1 class="hero-name">Designing <em>secure,</em><br>observable, and<br>resilient infrastructure.</h1>
+      <p class="hero-subtitle">14+ years of experience designing, operating, and securing enterprise and cloud networks. Specialized in Zero Trust architectures, hybrid AWS/OCI connectivity, infrastructure automation, observability, and incident response.</p>
       <div class="hero-actions">
         <a href="#bio" class="btn btn-primary">Read my story</a>
         <a href="resume.pdf" download class="btn btn-outline">Download resume</a>
-        <a href="https://linkedin.com/in/andrii" target="_blank" class="btn btn-outline">LinkedIn</a>
+        <a href="https://linkedin.com/in/andriidanylov" target="_blank" class="btn btn-outline">LinkedIn</a>
       </div>
       <div class="hero-stats">
         <div class="stat-card">
           <div class="stat-num">14+</div>
-          <div class="stat-label">Years in networking</div>
+          <div class="stat-label">Years of experience</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">Zero Trust</div>
-          <div class="stat-label">SASE / Cato Networks</div>
+          <div class="stat-num">40%</div>
+          <div class="stat-label">VPN ticket reduction (Zero Trust)</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">AWS / EKS</div>
-          <div class="stat-label">Cloud infrastructure</div>
+          <div class="stat-num">AWS / OCI</div>
+          <div class="stat-label">Hybrid cloud connectivity</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">MSc</div>
@@ -761,7 +850,7 @@
           <span class="avatar-initials">A</span>
         </div>
         <div class="bio-links">
-          <a href="https://linkedin.com/in/andrii" target="_blank" class="bio-link">
+          <a href="https://linkedin.com/in/andriidanylov" target="_blank" class="bio-link">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn Profile
           </a>
@@ -769,31 +858,31 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16l4-4m0 0l-4-4m4 4H8M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             Download Resume (PDF)
           </a>
-          <a href="mailto:andrii@example.com" class="bio-link">
+          <a href="mailto:andrii@andriidanylov.com" class="bio-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            andrii@example.com
+            andrii@andriidanylov.com
           </a>
         </div>
       </div>
 
       <div class="bio-content fade-in">
-        <p class="section-eyebrow">About</p>
-        <h2 class="section-title">Infrastructure engineer with a security-first mindset</h2>
-        <p>I'm a network security engineer based in South Florida with over 14 years of hands-on experience spanning enterprise networking, cloud security, and identity infrastructure. My work lives at the intersection of connectivity and security — making systems faster, more resilient, and harder to compromise.</p>
-        <p>Before moving to the US, I co-founded a wireless ISP in the Kyiv suburbs, which remains one of the most formative experiences of my career: we built real infrastructure from the ground up, figured out routing on the fly, and learned what it means to own a network end-to-end. I carried that operator mindset into everything since.</p>
-        <p>Today I focus on Zero Trust / SASE architecture (Cato Networks), AWS/EKS security, Microsoft 365 / Entra ID, and endpoint security tooling — EDR, RMM, DLP. I lead proof-of-concept engagements, drive competitive displacements, and build Python/API automation that turns manual processes into repeatable infrastructure.</p>
-        <p>I hold an MS in Computer Systems Engineering and a background in physics from Kyiv National University. I care about systems that are understood deeply before they are operated confidently.</p>
+        <p class="section-eyebrow">About Me</p>
+        <h2 class="section-title">Network Infrastructure &amp; Security Engineer</h2>
+        <p>I'm a Network Infrastructure and Security Engineer based in South Florida with over 14 years of experience building, operating, and securing enterprise networks.</p>
+        <p>My work spans hybrid cloud connectivity, Zero Trust architectures, enterprise wireless, network observability, incident response, and infrastructure automation. I enjoy solving complex operational problems through telemetry, automation, and systems thinking.</p>
+        <p>Throughout my career I've worked across enterprise, education, cloud, and service provider environments, progressing from hands-on network operations to leading infrastructure modernization and security initiatives supporting thousands of users.</p>
+        <p>Today I focus on network infrastructure, cloud security, automation, and observability — helping organizations build systems that are reliable, scalable, and secure.</p>
         <div class="bio-expertise">
           <span class="tag">Zero Trust / SASE</span>
-          <span class="tag">Cato Networks</span>
-          <span class="tag">AWS / EKS</span>
+          <span class="tag">Hybrid Cloud (AWS / OCI)</span>
+          <span class="tag">Network Observability</span>
+          <span class="tag">Incident Response</span>
+          <span class="tag">Infrastructure Automation</span>
+          <span class="tag">Python / APIs / Terraform</span>
+          <span class="tag">Enterprise Wireless</span>
           <span class="tag">Microsoft Entra ID</span>
-          <span class="tag">Python / API Automation</span>
-          <span class="tag">EDR / DLP</span>
-          <span class="tag">Ruckus Wireless</span>
-          <span class="tag">Hack The Box</span>
-          <span class="tag">Penetration Testing</span>
-          <span class="tag">VPC Flow Logs</span>
+          <span class="tag">XDR / EDR</span>
+          <span class="tag">Jenkins / Git</span>
         </div>
       </div>
     </div>
@@ -803,40 +892,102 @@
 <!-- STORY -->
 <section id="story">
   <div class="container">
-    <p class="section-eyebrow fade-in">Origin story</p>
-    <h2 class="section-title fade-in">How a physics student became a network builder</h2>
-    <p style="color: var(--text-2); max-width: 620px; margin-bottom: 0;" class="fade-in">The path from theoretical physics to enterprise network security isn't a straight line — but in retrospect, every step made the next one possible.</p>
+    <p class="section-eyebrow fade-in">Background</p>
+    <h2 class="section-title fade-in">From Physics to Infrastructure</h2>
 
     <div class="story-timeline">
       <div class="story-node fade-in">
-        <div class="story-year">Early 2000s · Kyiv</div>
-        <h3>Physics first — then the internet arrived</h3>
-        <p>I started my undergraduate degree in physics at Kyiv National University, drawn to understanding how things work at a fundamental level. Then broadband internet hit the Kyiv suburbs. Neighbors needed connectivity. I got curious about how wireless links actually worked. That curiosity led somewhere unexpected.</p>
+        <div class="story-year">Kyiv National University</div>
+        <h3>Applied Physics &amp; Radiophysics</h3>
+        <p>My technical journey began studying Applied Physics and Radiophysics at Kyiv National University. Physics taught me to think in systems, understand root causes, and approach complex problems analytically — a foundation I draw on every day.</p>
       </div>
 
       <div class="story-node fade-in">
-        <div class="story-year">Mid-2000s · Kyiv suburbs</div>
-        <h3>Co-founding a wireless ISP — infrastructure from scratch</h3>
-        <p>Along with a partner, I co-founded a wireless internet service provider serving the suburban Kyiv area. We designed the topology, sourced the radios, configured the routing — no playbook, just first principles. We were responsible for uptime for real customers who needed their connection to work. That experience crystallized something for me: networking isn't abstract. It's the infrastructure that everything else depends on.</p>
+        <div class="story-year">Early Networking</div>
+        <h3>Where theory meets real-world impact</h3>
+        <p>Working with internet service providers and enterprise environments, I became fascinated by networking because it sits at the intersection of theory and real-world impact. Every application, service, and user experience depends on reliable connectivity. I wanted to build and operate the infrastructure that everything else runs on.</p>
       </div>
 
       <div class="story-node fade-in">
-        <div class="story-year">Late 2000s · United States</div>
-        <h3>Graduate school and the shift to enterprise</h3>
-        <p>I relocated to the US to complete my MS in Computer Systems Engineering, which bridged the gap between the operator instincts I'd developed running the ISP and the formal systems knowledge needed to work at enterprise scale. I learned to think in architectures, not just configurations.</p>
+        <div class="story-year">United States · Graduate Studies</div>
+        <h3>Enterprise Infrastructure</h3>
+        <p>After relocating to the US and completing graduate studies in Computer Systems Engineering, I expanded into enterprise networking, wireless architecture, cloud connectivity, and automation — applying operator instincts at enterprise scale across diverse industries.</p>
       </div>
 
       <div class="story-node fade-in">
-        <div class="story-year">2010s · Enterprise networking</div>
-        <h3>Building expertise across the enterprise stack</h3>
-        <p>Over the next decade I accumulated deep hands-on experience across switching, wireless, firewall, identity, and eventually cloud. I ran competitive displacement projects, led Proof-of-Concept engagements, and built API-driven automation to eliminate the manual overhead that makes security teams slow. The through-line: understand the system at depth, then make it better.</p>
+        <div class="story-year">Present</div>
+        <h3>Security &amp; Cloud</h3>
+        <p>Over the last several years my focus has shifted toward Zero Trust architectures, hybrid cloud networking, observability, and security engineering — areas where networking, security, and software increasingly converge. I'm energized by the complexity and the stakes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <p class="section-eyebrow fade-in">Work</p>
+    <h2 class="section-title fade-in">Featured Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-title">Enterprise Zero Trust Transformation</div>
+          <div class="project-scope">2,000+ Users · SASE · Identity-Based Access</div>
+        </div>
+        <p class="project-desc">Architected and led migration from traditional VPN and segmented connectivity to a cloud-delivered Zero Trust platform supporting users, branch offices, cloud workloads, and DMZ environments.</p>
+        <div class="project-results">
+          <div class="project-results-label">Results</div>
+          <div class="project-result-item">VPN support tickets reduced by 40%</div>
+          <div class="project-result-item">Service desk workload reduced by 30%</div>
+          <div class="project-result-item">Simplified compliance operations</div>
+        </div>
       </div>
 
-      <div class="story-node fade-in">
-        <div class="story-year">Present · South Florida</div>
-        <h3>Cloud security, Zero Trust, and what's next</h3>
-        <p>Today I work at the convergence of network engineering and cloud security — Zero Trust architecture, Cato SASE, AWS/EKS, Microsoft Entra ID, and endpoint security. I run local AI inference for penetration testing research and work through Hack The Box to stay sharp on offensive techniques. The physics student from Kyiv is still asking: how does this actually work? What breaks? How do we build something that doesn't?</p>
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-title">Hybrid AWS / OCI Connectivity</div>
+          <div class="project-scope">Multi-Cloud · Production Workloads · Private Networking</div>
+        </div>
+        <p class="project-desc">Designed and operated secure multi-cloud networking supporting production workloads across AWS and Oracle Cloud Infrastructure, ensuring routing integrity, segmentation, and end-to-end observability.</p>
+        <div class="project-results">
+          <div class="project-results-label">Focus Areas</div>
+          <div class="project-result-item">Routing and segmentation across cloud boundaries</div>
+          <div class="project-result-item">Private connectivity and security controls</div>
+          <div class="project-result-item">Observability and troubleshooting at cloud scale</div>
+        </div>
       </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-title">Incident Response Engineering</div>
+          <div class="project-scope">XDR · Telemetry · Detection &amp; Containment</div>
+        </div>
+        <p class="project-desc">Partnered with security teams to investigate and contain suspicious activity across enterprise and cloud environments, improving detection fidelity and response velocity.</p>
+        <div class="project-results">
+          <div class="project-results-label">Results</div>
+          <div class="project-result-item">Improved detection coverage across endpoints and network</div>
+          <div class="project-result-item">Reduced mean time to contain</div>
+          <div class="project-result-item">Enhanced telemetry collection and visibility</div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-title">Infrastructure Automation Platform</div>
+          <div class="project-scope">Python · APIs · Jenkins · Git · Terraform</div>
+        </div>
+        <p class="project-desc">Developed Python-based automation for network operations, access management, compliance validation, and operational reporting — reducing manual toil and improving consistency across change workflows.</p>
+        <div class="project-results">
+          <div class="project-results-label">Focus Areas</div>
+          <div class="project-result-item">Network operations automation via REST APIs</div>
+          <div class="project-result-item">Compliance and access management workflows</div>
+          <div class="project-result-item">CI/CD integration with Jenkins and Git</div>
+        </div>
+        <div class="project-tech"><strong>Stack:</strong> Python · APIs · Jenkins · Git · Terraform</div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -851,37 +1002,34 @@
       <div class="career-card fade-in">
         <div class="career-header">
           <div>
-            <div class="career-role">Network Security Engineer</div>
-            <div class="career-company">Enterprise — South Florida</div>
+            <div class="career-role">Senior Network Security Engineer</div>
+            <div class="career-company">Cinch Home Services</div>
           </div>
-          <div class="career-period">2018 – Present</div>
+          <div class="career-period">2026 – Present</div>
         </div>
-        <p class="career-desc">Lead architect for Zero Trust / SASE deployments using Cato Networks. Manage AWS/EKS security infrastructure including VPC Flow Log analysis and security group remediation. Drive Microsoft 365 and Entra ID identity security initiatives. Built Python-based monitoring automation (Cato POP health tool) with Slack/email alerting via three-source API architecture. Lead PoC engagements and competitive network displacements.</p>
+        <p class="career-desc">Leading Zero Trust architecture, AWS/OCI security, incident response, and infrastructure modernization initiatives across enterprise environments.</p>
         <div class="career-tags">
-          <span class="career-tag">Cato Networks / SASE</span>
-          <span class="career-tag">AWS / EKS</span>
-          <span class="career-tag">Microsoft Entra ID</span>
-          <span class="career-tag">Python / API</span>
-          <span class="career-tag">EDR / DLP / RMM</span>
-          <span class="career-tag">VPC Flow Logs</span>
+          <span class="career-tag">Zero Trust Architecture</span>
+          <span class="career-tag">AWS / OCI</span>
+          <span class="career-tag">Incident Response</span>
+          <span class="career-tag">Infrastructure Modernization</span>
         </div>
       </div>
 
       <div class="career-card fade-in">
         <div class="career-header">
           <div>
-            <div class="career-role">Senior Network Engineer</div>
-            <div class="career-company">Enterprise Infrastructure</div>
+            <div class="career-role">Network Security Engineer</div>
+            <div class="career-company">Cinch Home Services</div>
           </div>
-          <div class="career-period">2013 – 2018</div>
+          <div class="career-period">2025 – 2026</div>
         </div>
-        <p class="career-desc">Designed and managed enterprise wireless and LAN infrastructure. Led a competitive Meraki → Ruckus displacement at Cinch Home Services, leveraging Ruckus BeamFlex+, ChannelFly, DPSK3, and RUCKUS Analytics to solve density and roaming challenges. Developed structured PoC evaluation frameworks used across multiple customer accounts.</p>
+        <p class="career-desc">Security operations, XDR investigations, wireless and network optimization, and SASE platform administration supporting enterprise connectivity and visibility.</p>
         <div class="career-tags">
-          <span class="career-tag">Ruckus Wireless</span>
-          <span class="career-tag">Enterprise LAN</span>
-          <span class="career-tag">Network Displacement</span>
-          <span class="career-tag">PoC Leadership</span>
-          <span class="career-tag">DPSK3</span>
+          <span class="career-tag">Security Operations</span>
+          <span class="career-tag">XDR Investigations</span>
+          <span class="career-tag">SASE Administration</span>
+          <span class="career-tag">Wireless Optimization</span>
         </div>
       </div>
 
@@ -889,34 +1037,50 @@
         <div class="career-header">
           <div>
             <div class="career-role">Network Engineer</div>
-            <div class="career-company">Mid-market Enterprise</div>
+            <div class="career-company">Cinch Home Services</div>
           </div>
-          <div class="career-period">2010 – 2013</div>
+          <div class="career-period">2022 – 2025</div>
         </div>
-        <p class="career-desc">Managed switching, routing, and firewall infrastructure across multi-site enterprise environments. Built operational disciplines around network documentation, change management, and fault isolation. First role following graduate school — translated ISP-scale thinking into structured enterprise practice.</p>
+        <p class="career-desc">Led SASE migration, designed AWS cloud connectivity, managed branch networking across multiple sites, and developed infrastructure automation workflows.</p>
         <div class="career-tags">
-          <span class="career-tag">Switching / Routing</span>
-          <span class="career-tag">Firewall</span>
-          <span class="career-tag">Multi-site LAN</span>
-          <span class="career-tag">Network Documentation</span>
+          <span class="career-tag">SASE Migration</span>
+          <span class="career-tag">AWS Connectivity</span>
+          <span class="career-tag">Branch Networking</span>
+          <span class="career-tag">Infrastructure Automation</span>
         </div>
       </div>
 
       <div class="career-card fade-in">
         <div class="career-header">
           <div>
-            <div class="career-role">Co-Founder / Network Operator</div>
-            <div class="career-company">Wireless ISP · Kyiv, Ukraine</div>
+            <div class="career-role">Senior Network &amp; Systems Administrator</div>
+            <div class="career-company">IT Management Corporation</div>
           </div>
-          <div class="career-period">2005 – 2008</div>
+          <div class="career-period">2020 – 2024</div>
         </div>
-        <p class="career-desc">Co-founded and operated a wireless broadband ISP serving suburban Kyiv. Designed wireless topology, configured routing and addressing from scratch, and managed end-to-end operations — customer support, billing, field installation, and uptime. The foundational experience that made everything else possible.</p>
+        <p class="career-desc">Owned enterprise infrastructure, compliance initiatives, Python-based operational automation, and wireless architecture across multi-site environments.</p>
         <div class="career-tags">
-          <span class="career-tag">Wireless ISP</span>
-          <span class="career-tag">BGP / Routing</span>
-          <span class="career-tag">Network Design</span>
-          <span class="career-tag">Operations</span>
-          <span class="career-tag">Co-Founder</span>
+          <span class="career-tag">Enterprise Infrastructure</span>
+          <span class="career-tag">Compliance</span>
+          <span class="career-tag">Python Automation</span>
+          <span class="career-tag">Wireless Architecture</span>
+        </div>
+      </div>
+
+      <div class="career-card fade-in">
+        <div class="career-header">
+          <div>
+            <div class="career-role">Network Engineer</div>
+            <div class="career-company">IT Management Corporation</div>
+          </div>
+          <div class="career-period">2016 – 2020</div>
+        </div>
+        <p class="career-desc">Designed and managed enterprise Wi-Fi, NAC, routing and switching, and security hardening across a managed services environment.</p>
+        <div class="career-tags">
+          <span class="career-tag">Enterprise Wi-Fi</span>
+          <span class="career-tag">NAC</span>
+          <span class="career-tag">Routing &amp; Switching</span>
+          <span class="career-tag">Security Hardening</span>
         </div>
       </div>
 
@@ -1054,8 +1218,8 @@
       <h2 class="section-title fade-in">Let's talk infrastructure</h2>
       <p class="contact-sub fade-in">Open to conversations about solutions engineering, network security architecture, and building things that scale. Reach out directly or connect on LinkedIn.</p>
       <div class="contact-grid fade-in">
-        <a href="mailto:andrii@example.com" class="btn btn-primary">Send an email</a>
-        <a href="https://linkedin.com/in/andrii" target="_blank" class="btn btn-outline">LinkedIn</a>
+        <a href="mailto:andrii@andriidanylov.com" class="btn btn-primary">Send an email</a>
+        <a href="https://linkedin.com/in/andriidanylov" target="_blank" class="btn btn-outline">LinkedIn</a>
         <a href="resume.pdf" download class="btn btn-outline">Resume (PDF)</a>
       </div>
     </div>
@@ -1063,7 +1227,7 @@
 </section>
 
 <footer>
-  <p>Andrii · Network Security Engineer · Boca Raton, FL · Built with intention.</p>
+  <p>Andrii Danylov· Network Security Engineer · Boca Raton, FL · Built with intention.</p>
 </footer>
 
 <script>
