@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Andrii Danylov</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero { padding: 7rem 2rem 4rem; background: var(--surface); border-bottom: 1px solid var(--border); }
+.page-hero-inner { max-width: 1100px; margin: 0 auto; }
+
+.projects-section { padding: 3rem 2rem; }
+.projects-section:nth-child(odd) { background: var(--ink); }
+.projects-section:nth-child(even) { background: var(--surface); }
+
+.section-label {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--text-3); font-weight: 500; margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+}
+.project-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem; max-width: 1100px; margin: 0 auto;
+}
+.proj-card {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.5rem; transition: all 0.25s;
+  display: flex; flex-direction: column;
+}
+.proj-card:hover { border-color: var(--border-accent); transform: translateY(-2px); }
+
+.proj-card-top { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0.75rem; }
+.proj-icon {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: var(--accent-muted); border: 1px solid var(--border-accent);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+}
+.proj-name {
+  font-family: var(--display); font-size: 0.97rem; font-weight: 600;
+  color: var(--accent-bright); line-height: 1.3;
+}
+.proj-name a { color: inherit; text-decoration: none; }
+.proj-name a:hover { text-decoration: underline; }
+.proj-desc { font-size: 0.875rem; color: var(--text-2); line-height: 1.65; flex: 1; margin-bottom: 1rem; }
+.proj-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.proj-tech { font-size: 11.5px; color: var(--text-3); }
+.proj-link {
+  font-size: 12px; color: var(--accent-bright); text-decoration: none;
+  display: flex; align-items: center; gap: 4px;
+}
+.proj-link:hover { text-decoration: underline; }
+
+.section-inner { max-width: 1100px; margin: 0 auto; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Andrii Danylov<span>.</span></a>
+  <button class="nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="index.html#writing">Writing</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="index.html#career">Career</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="resume.pdf" download class="nav-cta">Resume ↓</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="section-eyebrow">GitHub Projects</p>
+    <h1 class="section-title" style="margin-bottom:0.75rem">Infrastructure &amp; Automation Projects</h1>
+    <p style="color:var(--text-2);max-width:600px;font-size:1rem;line-height:1.7">
+      Selected open-source tooling for network automation, infrastructure operations, security, and cloud management. All projects are available on <a href="https://github.com/andriispot" target="_blank" style="color:var(--accent-bright)">github.com/andriispot</a>.
+    </p>
+  </div>
+</div>
+
+<!-- NETWORK AUTOMATION -->
+<div class="projects-section">
+  <div class="section-inner">
+    <div class="section-label">Network Automation</div>
+    <div class="project-grid">
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">🔁</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">cato-pop-monitor</a></div>
+        </div>
+        <p class="proj-desc">Three-source Cato Networks POP health monitoring tool. Combines CMA snapshot API, accountMetrics API, and StatusHub public feed to provide composite health status with Slack and email alerting. Designed to surface real signal beyond what any single API provides.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · REST APIs · Slack SDK · SMTP</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">🔍</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">vpc-flow-log-analyzer</a></div>
+        </div>
+        <p class="proj-desc">Toolset for EKS security group remediation using VPC Flow Log analysis. Queries CloudWatch Logs Insights, classifies source IPs into private/public/unknown buckets, and generates remediation recommendations to reduce overly permissive security group rules.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · AWS CLI · CloudWatch · Boto3</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">📋</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">network-config-audit</a></div>
+        </div>
+        <p class="proj-desc">Automated network device configuration compliance auditing framework. Connects to devices via SSH, checks configurations against defined policy baselines, detects drift, and generates operational reports with remediation guidance.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · Netmiko · NAPALM · Jinja2</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">📡</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">bgp-route-monitor</a></div>
+        </div>
+        <p class="proj-desc">BGP route change detection and alerting tool. Monitors routing tables via SNMP and API polling, detects unexpected prefix withdrawals or announcements, and alerts on-call engineers via configurable notification channels.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · SNMP · REST APIs</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- INFRASTRUCTURE AUTOMATION -->
+<div class="projects-section">
+  <div class="section-inner">
+    <div class="section-label">Infrastructure Automation</div>
+    <div class="project-grid">
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">⚙️</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">access-provisioning-automation</a></div>
+        </div>
+        <p class="proj-desc">Automated user access provisioning and de-provisioning pipeline integrating HR system events with Active Directory, cloud IAM, and network access control. Reduces provisioning time from days to minutes and enforces least-privilege policies.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · REST APIs · LDAP · Jenkins</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">🏗️</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">terraform-network-baseline</a></div>
+        </div>
+        <p class="proj-desc">Terraform modules for consistent network infrastructure baseline deployment across AWS environments. Includes VPC configuration, security group templates, Transit Gateway attachment patterns, and flow log enablement.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Terraform · AWS · HCL</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">📊</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">compliance-report-generator</a></div>
+        </div>
+        <p class="proj-desc">Automated compliance reporting pipeline. Collects configuration and access data from network devices, cloud environments, and identity systems, then generates structured compliance reports for audit requirements.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · APIs · Jinja2 · PDF</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- SECURITY TOOLING -->
+<div class="projects-section">
+  <div class="section-inner">
+    <div class="section-label">Security Tooling</div>
+    <div class="project-grid">
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">🛡️</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">xdr-alert-enricher</a></div>
+        </div>
+        <p class="proj-desc">XDR alert enrichment pipeline that automatically augments security alerts with network context — including flow data, DNS resolution history, and asset ownership — before routing to incident response queues.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · REST APIs · SIEM Integration</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">🔐</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">nac-policy-auditor</a></div>
+        </div>
+        <p class="proj-desc">Network Access Control policy auditing tool. Validates NAC policy consistency across switches and wireless controllers, identifies mismatches between intended and deployed policy, and reports exceptions for remediation.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · Netmiko · SSH</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">🔎</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">threat-intel-lookup</a></div>
+        </div>
+        <p class="proj-desc">Lightweight threat intelligence lookup tool for incident response workflows. Queries multiple public and private TI feeds for IP, domain, and hash enrichment, returning aggregated verdicts with confidence scoring.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · REST APIs · JSON</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CLOUD OPERATIONS -->
+<div class="projects-section">
+  <div class="section-inner">
+    <div class="section-label">Cloud Operations</div>
+    <div class="project-grid">
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">☁️</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">aws-oci-connectivity-toolkit</a></div>
+        </div>
+        <p class="proj-desc">Operational toolkit for managing hybrid AWS/OCI connectivity. Includes route validation scripts, connectivity health checks, and observability dashboards for multi-cloud networking environments.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · AWS CLI · OCI CLI · Terraform</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">📈</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">cloud-cost-network-attribution</a></div>
+        </div>
+        <p class="proj-desc">Network traffic cost attribution tool for AWS environments. Analyzes VPC flow data and cross-AZ/cross-region transfer patterns to identify cost optimization opportunities and attribute data transfer costs to workloads.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · Boto3 · CloudWatch · Cost Explorer</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="proj-card fade-in">
+        <div class="proj-card-top">
+          <div class="proj-icon">🔄</div>
+          <div class="proj-name"><a href="https://github.com/andriispot" target="_blank">sase-migration-toolkit</a></div>
+        </div>
+        <p class="proj-desc">Tooling developed during enterprise SASE migration. Includes user migration tracking, policy validation, rollback scripts, and operational runbooks for managing large-scale VPN-to-SASE transitions.</p>
+        <div class="proj-footer">
+          <span class="proj-tech">Python · REST APIs · CSV/JSON</span>
+          <a href="https://github.com/andriispot" class="proj-link" target="_blank">View on GitHub ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section id="contact" style="background:var(--ink-3);padding:5rem 2rem">
+  <div class="container" style="text-align:center;max-width:520px">
+    <p class="section-eyebrow">Collaborate</p>
+    <h2 class="section-title">Interested in working together?</h2>
+    <p style="color:var(--text-2);margin-bottom:2rem">Open to conversations about infrastructure, automation, and cloud networking challenges.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="mailto:andrii@andriidanylov.com" class="btn btn-primary">andrii@andriidanylov.com</a>
+      <a href="https://github.com/andriispot" target="_blank" class="btn btn-outline">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Andrii Danylov · Network Infrastructure &amp; Security Engineer · Lake Worth, FL &nbsp;·&nbsp;
+    <a href="mailto:andrii@andriidanylov.com">andrii@andriidanylov.com</a> &nbsp;·&nbsp;
+    <a href="https://linkedin.com/in/andriidanylov" target="_blank">LinkedIn</a> &nbsp;·&nbsp;
+    <a href="https://github.com/andriispot" target="_blank">GitHub</a>
+  </p>
+</footer>
+
+<script>
+(function() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+})();
+</script>
+</body>
+</html>

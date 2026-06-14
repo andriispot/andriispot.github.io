@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Andrii Danylov</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero { padding: 7rem 2rem 4rem; background: var(--surface); border-bottom: 1px solid var(--border); }
+.page-hero-inner { max-width: 760px; margin: 0 auto; }
+
+.research-section { padding: 5rem 2rem; }
+.research-section:nth-child(odd) { background: var(--ink); }
+.research-section:nth-child(even) { background: var(--surface); }
+.research-section-inner { max-width: 760px; margin: 0 auto; }
+
+.research-header {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.75rem; margin-bottom: 2rem;
+  display: flex; align-items: flex-start; gap: 1.5rem;
+}
+.research-institution-badge {
+  flex-shrink: 0; background: var(--accent-muted); border: 1px solid var(--border-accent);
+  border-radius: 10px; padding: 0.75rem 1rem; text-align: center; min-width: 120px;
+}
+.institution-abbr {
+  font-family: var(--display); font-size: 1.3rem; font-weight: 700;
+  color: var(--accent-bright); display: block; line-height: 1;
+}
+.institution-full { font-size: 10.5px; color: var(--text-3); margin-top: 4px; display: block; line-height: 1.4; }
+.research-header-text h2 {
+  font-family: var(--display); font-size: 1.2rem; font-weight: 700;
+  color: var(--text-1); margin-bottom: 0.35rem; line-height: 1.3;
+}
+.research-header-text .meta { font-size: 12.5px; color: var(--text-3); margin-bottom: 0; }
+.research-download {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 1rem;
+  padding: 8px 18px; border-radius: 7px; border: 1px solid var(--border-accent);
+  background: var(--accent-muted); color: var(--accent-bright); font-size: 13px;
+  text-decoration: none; transition: all 0.2s;
+}
+.research-download:hover { background: rgba(59,130,246,0.15); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Andrii Danylov<span>.</span></a>
+  <button class="nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#writing">Writing</a></li>
+    <li><a href="research.html" class="active">Research</a></li>
+    <li><a href="index.html#career">Career</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="resume.pdf" download class="nav-cta">Resume ↓</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="section-eyebrow">Academic Work</p>
+    <h1 class="section-title" style="margin-bottom:0.75rem">Research</h1>
+    <p style="color:var(--text-2);font-size:1rem;line-height:1.7">Graduate and undergraduate research in applied physics, systems engineering, and network architecture — forming the analytical foundation I bring to production infrastructure work.</p>
+  </div>
+</div>
+
+<!-- UNDERGRADUATE -->
+<div class="research-section" id="undergraduate">
+  <div class="research-section-inner">
+
+    <div class="research-header fade-in">
+      <div class="research-institution-badge">
+        <span class="institution-abbr">KNU</span>
+        <span class="institution-full">Kyiv National University</span>
+      </div>
+      <div class="research-header-text">
+        <h2>Electromagnetic Propagation and Wireless Signal Behavior in Urban Environments</h2>
+        <p class="meta">Bachelor of Science · Applied Physics &amp; Radiophysics · Kyiv, Ukraine</p>
+        <a href="#" class="research-download">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16l4-4m0 0l-4-4m4 4H8M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Download PDF (placeholder)
+        </a>
+      </div>
+    </div>
+
+    <div class="prose fade-in">
+
+      <h2>Abstract</h2>
+      <p>This research examined electromagnetic wave propagation characteristics in mixed urban environments, with particular focus on the factors affecting wireless signal attenuation, reflection, and multipath interference at frequencies relevant to emerging broadband wireless access systems. The study combined theoretical analysis with empirical field measurements to develop a practical propagation model applicable to real-world network planning.</p>
+
+      <h2>Research Summary</h2>
+      <p>The study was motivated by the rapid expansion of wireless internet access in the Kyiv metropolitan area during the early 2000s — a period when wireless ISPs were deploying infrastructure with limited guidance from standardized propagation models designed for local conditions.</p>
+      <p>Measurements were collected across multiple urban microcell environments, capturing signal level variance as a function of distance, building density, and environmental conditions. The research applied Friis transmission equations and empirically derived path loss exponents to develop a simplified prediction model tuned to the physical geometry of Eastern European urban construction.</p>
+
+      <div class="diagram-placeholder">
+        <div class="icon">📡</div>
+        <p><strong>Figure 1:</strong> Wireless propagation measurement grid — urban signal attenuation vs. distance across mixed building-density environments</p>
+      </div>
+
+      <h2>Key Findings</h2>
+      <ul>
+        <li>Path loss exponent in dense urban configurations exceeded standard free-space models by 1.4–1.8×, highlighting the importance of locally calibrated models</li>
+        <li>Rooftop antenna placement reduced signal obstruction losses by 30–45% compared to mid-building mounting in residential block environments</li>
+        <li>Multipath interference at 2.4 GHz exhibited predictable seasonal variation correlated with foliage density, with summer attenuation increases of 4–7 dB in tree-lined corridors</li>
+        <li>Practical frequency planning guidelines developed from the data were applied directly to ISP deployment decisions, reducing site survey requirements</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Connection to practice:</strong> This research directly informed the wireless ISP infrastructure I co-operated in the Kyiv suburbs — translating academic propagation modeling into real deployment decisions with measurable reliability improvements.
+      </div>
+
+      <h2>Relevance to Current Work</h2>
+      <p>The analytical framework developed in this research — decomposing complex real-world behavior into measurable, modelable components — remains central to how I approach infrastructure engineering problems. Whether diagnosing unexplained packet loss, designing overlay network segmentation, or investigating cloud connectivity failures, the instinct to find the physical or logical root cause before tuning symptoms comes directly from this formative work in applied physics.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- GRADUATE CAPSTONE -->
+<div class="research-section" id="capstone">
+  <div class="research-section-inner">
+
+    <div class="research-header fade-in">
+      <div class="research-institution-badge">
+        <span class="institution-abbr">SFBU</span>
+        <span class="institution-full">San Francisco Bay University</span>
+      </div>
+      <div class="research-header-text">
+        <h2>Enterprise Network Architecture for Hybrid Cloud Environments: Security, Observability, and Operational Resilience</h2>
+        <p class="meta">Master of Science · Computer Systems Engineering · San Francisco Bay University</p>
+        <a href="#" class="research-download">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16l4-4m0 0l-4-4m4 4H8M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Download PDF (placeholder)
+        </a>
+      </div>
+    </div>
+
+    <div class="prose fade-in">
+
+      <h2>Executive Summary</h2>
+      <p>This capstone project addressed the architectural and operational challenges of enterprise network design in environments where workloads span on-premises data centers, public cloud (AWS), and private cloud (Oracle Cloud Infrastructure). The research produced a reference architecture for hybrid cloud network connectivity prioritizing security, observability, and operational resilience — validated against realistic enterprise constraints including budget, staffing, and vendor compatibility.</p>
+      <p>The central finding is that most enterprise hybrid cloud networking failures are not technical failures — they are observability failures. Organizations cannot diagnose what they cannot see, and most hybrid network architectures create fundamental visibility gaps that accumulate into operational debt.</p>
+
+      <h2>Problem Statement</h2>
+      <p>Enterprise organizations increasingly operate workloads across multiple cloud providers and on-premises environments, but network architecture decisions are frequently made independently per environment rather than holistically. The result is fragmented connectivity, inconsistent security policy enforcement, and — critically — insufficient observability across the full traffic path.</p>
+      <p>This project examined how a mid-enterprise organization (1,500–3,000 users, 200–600 cloud workloads) should design hybrid network connectivity from first principles, with security and observability as first-class design requirements rather than post-deployment additions.</p>
+
+      <div class="diagram-placeholder">
+        <div class="icon">🏗️</div>
+        <p><strong>Figure 1:</strong> Reference architecture — hybrid AWS/OCI network connectivity with centralized observability plane</p>
+      </div>
+
+      <h2>Architecture</h2>
+      <p>The proposed architecture organizes hybrid cloud networking into four functional planes:</p>
+      <ul>
+        <li><strong>Connectivity plane:</strong> Private interconnects between on-premises and cloud environments (AWS Direct Connect, OCI FastConnect), supplemented by encrypted overlay for cost-optimized secondary paths</li>
+        <li><strong>Security plane:</strong> Centralized policy enforcement through a SASE/SSE platform providing Zero Trust access controls, consistent policy across all traffic paths regardless of origin or destination</li>
+        <li><strong>Observability plane:</strong> Unified telemetry collection from VPC Flow Logs, IPFIX exports, DNS query logs, and application traces — normalized into a single operational data model</li>
+        <li><strong>Operations plane:</strong> Automation-first change management with infrastructure-as-code, GitOps workflows, and automated compliance validation</li>
+      </ul>
+
+      <div class="diagram-placeholder">
+        <div class="icon">🔀</div>
+        <p><strong>Figure 2:</strong> Traffic flow matrix — on-premises to AWS, on-premises to OCI, and AWS-to-OCI paths with security control insertion points</p>
+      </div>
+
+      <h2>Key Findings</h2>
+      <ul>
+        <li>Hybrid network security controls are most effective when enforced at the identity and session layer rather than the network perimeter layer — reflecting a fundamental shift in where trust decisions should occur</li>
+        <li>VPC Flow Logs alone are insufficient for operational observability; supplementing with DNS query logs and application-layer traces reduces mean time to diagnose connectivity issues by an estimated 60–70%</li>
+        <li>Infrastructure-as-code for network resources (Terraform) reduces configuration drift and enables meaningful audit trails for compliance requirements</li>
+        <li>Automation investment yields the highest return when focused on the most frequent operational tasks (access provisioning, configuration compliance validation, incident data collection) rather than rare complex tasks</li>
+        <li>Organizational friction — not technical limitations — is the primary barrier to hybrid network observability improvement in most enterprise environments</li>
+      </ul>
+
+      <h2>Lessons Learned</h2>
+      <p>The most valuable outcome of this research was clarifying the relationship between architecture decisions and operational outcomes. Architectural choices that appear equivalent at design time often diverge significantly in operational practice — particularly around troubleshooting latency and incident response capability.</p>
+      <p>The research also reinforced that hybrid cloud networking is fundamentally a distributed systems problem, not a networking-in-isolation problem. The failure modes that matter most — cascading failures, split-brain conditions, asymmetric routing — require cross-domain visibility that most organizations have not invested in building.</p>
+      <p>Finally, the capstone process itself demonstrated the value of academic rigor for engineering practice: forcing structured literature review, explicit methodology, and documented assumptions surfaced gaps in my own operational mental models that I have since addressed in production environments.</p>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Andrii Danylov · Network Infrastructure &amp; Security Engineer · Lake Worth, FL &nbsp;·&nbsp;
+    <a href="mailto:andrii@andriidanylov.com">andrii@andriidanylov.com</a> &nbsp;·&nbsp;
+    <a href="https://linkedin.com/in/andriidanylov" target="_blank">LinkedIn</a> &nbsp;·&nbsp;
+    <a href="https://github.com/andriispot" target="_blank">GitHub</a>
+  </p>
+</footer>
+
+<script>
+(function() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+})();
+</script>
+</body>
+</html>
